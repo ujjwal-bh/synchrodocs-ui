@@ -1,15 +1,24 @@
-import Home from './Components/Home';
-import TextEditor from './Components/TextEditor';
-import {BrowserRouter as Router, Routes, Route, } from "react-router-dom"
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
+import TextEditor from "./Pages/TextEditor";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AuthRoutes from "./routes/AuthRoutes";
+import ProtectedRoutes from "./routes/ProtectedRoutes";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' exact element={<Home/>}>
-          
+        <Route element={<AuthRoutes />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
-        <Route path='/document/:id' element={<TextEditor/>}/>
+        <Route element={<ProtectedRoutes />}>
+          <Route path="/" exact element={<Home />} />
+          {/* <Route path="/document/:id" element={<TextEditor />} /> */}
+        </Route>
+        <Route path="/document/:id" element={<TextEditor />} />
       </Routes>
     </Router>
   );
