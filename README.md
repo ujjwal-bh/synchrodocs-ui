@@ -1,6 +1,7 @@
 # SynchroDocs-UI
 
 This is the frontend for SynchroDocs, a collaborative online document editor. The frontend is built with React and uses Quill for rich text editing.
+backend: https://www.github.com/ujjwal-bh/synchrodocs-api
 
 ## Features
 
