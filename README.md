@@ -59,4 +59,4 @@ Ensure you have the following installed on your system:
 
 ## Contact
 
-For any questions or issues, please open an issue in the repository or contact at ujjwalbh001@gmail.com.
+For any questions or issues, please open an issue in the repository or contact at bhattaraiujjwal26@gmail.com.
